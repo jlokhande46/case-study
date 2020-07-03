@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}login{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  <div style="display:block; border: solid; margin:120px; margin-right: 190px;
+  background-color: lightblue;
+   ">    
+        {% if messages %}
+        <ul style="text-align: center;
+        font-weight: bold;">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    <h1 style="text-align: center; font-weight: bold;">Log In</h1>
+    <form style="text-align: center;" action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}
+        </p>
+         <p>{{ form.submit() }}</p>
+         
+
+        </form>
+        </div>
+{% endblock %}

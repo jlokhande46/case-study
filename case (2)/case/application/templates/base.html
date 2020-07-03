@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ABC Hostpital Management System</title>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    </head>
+    <body style="margin-top: -1.7%;background-color: cornflowerblue;">
+        <div style="background-color: aqua; height: 85px; width: 100%;">
+            <h1 style="text-align: center;">ABC Hostpital Management System</h1>
+            <div style="text-align: center;">
+                 
+                <form action="" method="post"> 
+                    <select name="Patient" style="margin-right: 50px;width:100px;height:20px;background-color: rgb(0, 140, 255);">
+  
+                        <option selected="selected">Patient</option>
+                        <option>View</option>
+                        <option>Update</option>
+                        <option>Search</option>
+                        <option>Delete</option>
+                        <option>Billing</option>
+
+                        <br>
+                        <br>
+                        <input type="submit" name="select">
+                    </select>
+                </form>
+
+                
+
+                <select style="margin-right: 50px; width:100px;background-color: rgb(0, 140, 255);">
+                    <option>Pharmacy</option>
+                </select>
+                <select style="margin-right: 50px; width:100px;background-color: rgb(0, 140, 255);">
+                    <option>Diagnostics</option>
+                </select>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>   
